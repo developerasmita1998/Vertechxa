@@ -26,16 +26,23 @@ function Iosapps() {
                 <div className="row">
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
                     <div className="widget">
-                        <img src={Ios} alt="Hybrid-img" className="img-fluid" />
+                        <img src={Ios} alt="Ios-img" className="img-fluid" />
                     </div>
                     </div>
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                    <div className="widget text-center">
+                    <div className="widget justify-text">
                         <h3 className="widget-title" style={{fontSize:"36px"}}>Ios Apps</h3>
                         <img src={line} alt="line" className="line" />
                      <p class="text-justify text-secondary-custom" style={{fontSize: "16px"}}>Vertech<span style={{color:"#da251d"}}>xa</span>iOS is a proprietary mobile operating system which runs on all Apple products i.e. iPhone, iPad and iPod Touch. iOS is based on Mac OS X operating system for desktops and laptops. The iOS developer kit provides tools that allow iOS App Design.
 							<br/><br/>
-We are one of the best iOS App Development Services in Pune. We have earned this success by developing interactive iPhone app at affordable cost which helps your business to grow. We at Vertech<span style={{color:"#da251d"}}>xa</span>, make a proper blend of objective-C and Apple inc. latest programming platform-Swift for developing custom iPhone apps which can work as miracle for their owners in terms of revenue and brand value. We offer a wide array of app sophisticated and high-quality services, due to which we are the primary choice of clients for all sorts of iOS/iPhone development solutions.
+             We are one of the best iOS App Development Services in Pune.
+              We have earned this success by developing interactive iPhone app at affordable cost which helps your business to grow. 
+             We at Vertech<span style={{color:"#da251d"}}>xa</span>, make a proper blend of objective-C 
+            and Apple inc. latest programming platform-Swift for
+            developing custom iPhone apps which can work as miracle for their
+            owners in terms of revenue and brand value. We offer a wide array of app
+           sophisticated and high-quality services, due to which we are the primary 
+            choice of clients for all sorts of iOS/iPhone development solutions.
 						</p>                    </div>
                     </div>
                 </div>

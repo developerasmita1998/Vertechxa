@@ -20,8 +20,8 @@ function Videoandtextmarketing() {
         </div>
       </div>
 
-      <div className="section2">
-        <div className="inner-section py-5">
+      <div className="dm-section2">
+        <div className="innerdm py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">

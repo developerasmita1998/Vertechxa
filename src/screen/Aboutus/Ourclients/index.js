@@ -7,8 +7,8 @@ import vision from "../../../assets/vision.png";
 function Ourclients() {
   useEffect(() => {
   AOS.init({
-    once: false, // Animation happens only once
-    duration: 1000 // Global duration fallback
+    once: false, 
+    duration: 1000 
   });
 }, []);
   return (
@@ -70,10 +70,10 @@ function Ourclients() {
             </div>
         
            <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-             <div className="widget text-center">
+             <div className="widget justify-text">
                 <h3 className="widget-title">Our Mission</h3>
                 <img src={line} alt="line" className="line" />
-                <p className="text-center text-secondary" style={{ fontSize: "16px" }}>
+                <p className="justify-text text-secondary" style={{ fontSize: "16px" }}>
                   To serve our customers to the
 							best by delivering technically sound and affordable business solutions while ensuring
 							exceptional customer support throughout the process. Vertech<span style={{ color: "#da251d" }}>xa</span>  will continuously strive to
@@ -93,10 +93,10 @@ function Ourclients() {
         <div className="container">
           <div className="row">
             <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-             <div className="widget text-center">
+             <div className="widget justify-text">
                 <h3 className="widget-title">Our Vision</h3>
                 <img src={line} alt="line" className="line" />
-                <p className="text-center text-secondary" style={{ fontSize: "16px" }}>
+                <p className="justify-text text-secondary" style={{ fontSize: "16px" }}>
                   Involve and encourage the values
 							of honesty and integrity amongst the team members by creating a supportive work culture in
 							the company. To become a prime performer in the global marketplace by providing highly

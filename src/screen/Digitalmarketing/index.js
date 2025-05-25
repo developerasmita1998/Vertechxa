@@ -20,8 +20,8 @@ function Videoandtextmarketing() {
         </div>
       </div>
 
-      <div className="section2">
-        <div className="inner-section py-5">
+      <div className="dm-section2">
+        <div className="innerdm py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -30,7 +30,7 @@ function Videoandtextmarketing() {
                     </div>
                     </div>
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                    <div className="widget text-center">
+                    <div className="widget justify-text">
                         <h3 className="widget-title" style={{fontSize:"36px"}}>Search Engine Optimization</h3>
                         <img src={line} alt="line" className="line" />
                         <p className="text-justify text-color-custom" style={{fontSize:"16px"}}>
@@ -53,7 +53,7 @@ function Videoandtextmarketing() {
                 </div>
                 <div className="row">
                     <div className="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                    <p className='text-justify text-color-custom' style={{fontSize:"16px"}}>
+                    <p className='justify-text text-color-custom' style={{fontSize:"16px"}}>
                     
 SEO is a method by which a business firm can generate greater online traffic that can then be used for increasing sales conversions. Every website creates content of its own in order to lure in more customers. This content can come in many forms, such as text, images and videos. Such content should be optimized with the right kind of keywords that are most searched by the target audience. By using all the highly searched keywords that are applicable for a content and business type, it is possible for the SEO specialists to improve the ranking of a website.
 <br/><br/>

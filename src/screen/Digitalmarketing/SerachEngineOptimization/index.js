@@ -20,8 +20,8 @@ function SearchEngineOptimization() {
         </div>
       </div>
 
-      <div className="section2">
-        <div className="inner-section py-5">
+      <div className="dm-section2">
+        <div className="innerdm py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -33,7 +33,7 @@ function SearchEngineOptimization() {
                     <div className="widget justify-text ">
                         <h3 className="widget-title" style={{fontSize:"36px"}}>Search Engine Optimization</h3>
                         <img src={line} alt="line" className="line" />
-                        <p className="text-justify text-color-custom" style={{fontSize:"16px"}}>
+                        <p className="justify-text text-color-custom" style={{fontSize:"16px"}}>
                         Vertech
                          <span style={{ color: "#da251d" }}>xa</span>
                           team provides complete support with best and high quality service SEO Services (Website Promotion) to their clients. Vertech
