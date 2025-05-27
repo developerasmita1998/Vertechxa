@@ -80,64 +80,7 @@ function Home() {
 
   };
 
-  const validation = async () => {
-    setError("");
-    try {
-      if (!firstName) {
-        setError("Please enter first name")
-        return false;
-      }
-      if (!lastName) {
-        setError("Please enter last name")
-        return false;
-      }
-      if (!age) {
-        setError("Please enter valid age")
-        return false;
-      }
-      if (!password) {
-        setError("Please enter valid password")
-        return false;
-      }
-      if (!email) {
-        setError("Please enter valid email")
-        return false;
-      }
-      //  return true;
-      if (validation) {
-
-        const data = {
-          "firstName": firstName,
-          "lastName": lastName,
-          "age": age,
-          "password": password,
-          "email": email
-        };
-
-        let url = "https://dummyjson.com/users/add";
-        let option = {
-          method: "POST",
-          url: url,
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-
-          },
-          data: data,
-        }
-        const response = await axios(option)
-        localStorage.setItem("userData", JSON.stringify(response.data));
-        navigate('/')
-      }
-
-
-
-    }
-    catch (error) {
-      setError(error.response.data.message)
-    }
-  }
-
+ 
 
 
   return (
@@ -262,61 +205,82 @@ function Home() {
             <div className="col-sm-5 ceo-info py-5 text-center fbg aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
               <h1 className="widget-title text-center" id="freeQuote">Free Quote</h1>
               <img src={line} alt="line" className="line mx-auto d-block" />
-              <form>
-                <div className="field">
-                  <input
-                    className="comming_place"
-                    name="name"
-                    type="text"
-                    placeholder="Your Name:"
-                    value=""
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                  <input
-                    className="comming_place"
-                    name="email"
-                    type="email"
-                    placeholder="Email Address:"
-                    value=""
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <input
-                    className="comming_place"
-                    name="mobile"
-                    type="text"
-                    placeholder="Phone Number:"
-                    value=""
-                    onChange={(e) => setMobile(e.target.value)}
-                    required
+             <form onSubmit={(e) => {
+  e.preventDefault();
+  
+  const formData = {
+    name,
+    email,
+    mobile,
+    subject,
+    message
+  };
 
-                  />
-                  <input
-                    className="comming_place"
-                    name="sub"
-                    type="text"
-                    placeholder="What We Can Do For You:"
-                    value=""
-                    onChange={(e) => setSubject(e.target.value)}
-                    required
+  // Get existing submissions
+  const existing = JSON.parse(localStorage.getItem("formSubmissions")) || [];
 
-                  />
-                  <textarea
-                    className="comming_place"
-                    name="msg"
-                    placeholder="Comment:"
-                    value=""
-                    onChange={(e) => setmessage(e.target.value)}></textarea>
-                  <input
-                    className="coming_place"
-                    type="submit"
-                    value="Submit"
-                    required
+  // Append new one
+  existing.push(formData);
 
-                  />
-                </div>
-              </form>
+  // Save back to localStorage
+  localStorage.setItem("formSubmissions", JSON.stringify(existing));
+
+  alert("Form submitted and saved locally!");
+
+  // Reset form
+  setName("");
+  setEmail("");
+  setMobile("");
+  setSubject("");
+  setmessage("");
+}}>
+              <div className="field">
+                <input
+                  className="comming_place"
+                  name="name"
+                  type="text"
+                  placeholder="Your Name:"
+                  value={name}
+                  onChange={(e)=>setName(e.target.value)}
+                />
+                <input
+                  className="comming_place"
+                  name="email"
+                  type="email"
+                  placeholder="Email Address:"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
+                />
+                <input
+                  className="comming_place"
+                  name="mobile"
+                  type="text"
+                  placeholder="Phone Number:"
+                  value={mobile}
+                  onChange={(e)=>setMobile(e.target.value)}
+                />
+                <input
+                  className="comming_place"
+                  name="sub"
+                  type="text"
+                  placeholder="What We Can Do For You:"
+                  value={subject}
+                  onChange={(e)=>setSubject(e.target.value)}
+                />
+                <textarea
+                  className="comming_place"
+                  name="msg"
+                  placeholder="Comment:"
+                  value={message}
+                  onChange={(e)=>setmessage(e.target.value)}></textarea>
+                <input
+                  className="coming_place"
+                  id="submit"
+                  type="submit"
+                  value="Submit"
+                />
+              </div>
+            </form>
             </div>
           </div>
 

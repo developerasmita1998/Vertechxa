@@ -19,73 +19,75 @@ const Navbar = () => {
   return (
     <nav className="shadow bg-white px-4 py-2 position-relative d-flex align-items-center justify-content-between">
       {/* Logo always left */}
-      <div href="/" className="d-flex align-items-center logo-container">
+      <div href="/" className="d-flex align-items-center logo-container" onClick={() => navigateRoutes('')}>
         <img src={logo} alt="Logo" width="135" height="60" />
       </div>
 
       {/* Desktop Menu aligned right */}
       <div className="d-none d-md-flex align-items-center gap-4"  style={{ marginRight: '12rem' }}>
-        <a  style={{fontSize:'12px'}} href='/' className="text-dark text-decoration-none cursor-pointer text-uppercase">Home</a>
+        <a  style={{fontSize:'12px'}} href='/' className="custom-header-dropdown text-dark text-decoration-none cursor-pointer text-uppercase">Home</a>
         {/* Dropdown */}
         <div className="dropdown">
           <a
             className="dropdown-toggle text-dark text-decoration-none cursor-pointer text-uppercase"
-            data-bs-toggle="dropdown"
-            role="button"  style={{fontSize:'12px'}}
+             style={{fontSize:'12px'}}
+href="/aboutus"
           >
             About Us <i className="fas fa-angle-double-down ms-2"></i>
           </a>
           <ul className="dropdown-menu show-on-hover"  style={{marginTop:'31%',left:'-50%'}}>
-            <li><a className="dropdown-item cursor-pointer text-uppercase" href="/aboutus">Who we are?</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('borrower')}>Borrower</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addcustomer')}>Add Customer</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addproduct')}>Product</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase" onClick={() => navigateRoutes('aboutus/whoweare')} >Who we are?</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase" onClick={() => navigateRoutes('aboutus/ourclients')}>Our Clients</a></li>
           </ul>
         </div>
           <div className="dropdown">
           <a
             className="dropdown-toggle text-dark text-decoration-none cursor-pointer text-uppercase"
-            data-bs-toggle="dropdown"
-            role="button" style={{fontSize:'12px'}}
+             style={{fontSize:'12px'}}
+href="/webdevelopment"
           >
             Web Development <i className="fas fa-angle-double-down ms-2"></i>
           </a>
           <ul className="dropdown-menu show-on-hover" style={{marginTop:'19%',left:'-15%'}}>
-            <li><a className="dropdown-item cursor-pointer text-uppercase" to="/aboutus/who-we-are">Borrower</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addcustomer')}>Add Customer</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addproduct')}>Product</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase" onClick={() => navigateRoutes('webdevelopment/webiste-development')}>Website Development</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('webdevelopment/e-commerce-development')}>E - Commerce Development</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('webdevelopment/cms-development')}>CMS Development</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('webdevelopment/php-development')}>PHP Development</a></li>
           </ul>
         </div>
           <div className="dropdown">
           <a
             className="dropdown-toggle text-dark text-decoration-none cursor-pointer text-uppercase"
-            data-bs-toggle="dropdown"
-            role="button" style={{fontSize:'12px'}}
+             style={{fontSize:'12px'}}
+href="/digitalmarketing"
           >
             Digital Marketing <i className="fas fa-angle-double-down ms-2"></i>
           </a>
           <ul className="dropdown-menu show-on-hover" style={{marginTop:'19%',left:'-17%'}}>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('borrower')}>Borrower</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addcustomer')}>Add Customer</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addproduct')}>Product</a></li>
-          </ul>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/search-engine-optimization')}>Search engine optimization</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/social-media-optimization')}>Social Media optimization</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/social-media-marketing')}>Social Media marketing</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/branding')}>Branding</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/logo-designing')}>Logo designing</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/video-and-text-marketing')}>Video & Text marketing</a></li>          </ul>
         </div>
           <div className="dropdown">
           <a
             className="dropdown-toggle text-dark text-decoration-none cursor-pointer text-uppercase"
-            data-bs-toggle="dropdown"
-            role="button" style={{fontSize:'12px'}}
+            style={{fontSize:'12px'}}
+href="/apps-and-software"
           >
             Apps & Software <i className="fas fa-angle-double-down ms-2"></i>
           </a>
           <ul className="dropdown-menu show-on-hover" style={{marginTop:'19%',left:'-18%'}}>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('borrower')}>Borrower</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addcustomer')}>Add Customer</a></li>
-            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('addproduct')}>Product</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('apps-and-software/andriod-apps')}>Andriod apps</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('apps-and-software/ios-apps')}>IOS Apps</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('apps-and-software/hybrid-apps')}>Hybrid Apps</a></li>
+            <li><a className="dropdown-item cursor-pointer text-uppercase"  onClick={() => navigateRoutes('apps-and-software/customize-software')}>Customize software</a></li>
           </ul>
         </div>
         
-        <a onClick={() => navigateRoutes('company')} style={{fontSize:'12px'}} className="text-dark text-decoration-none cursor-pointer text-uppercase">Contact Us</a>
+        <a onClick={() => navigateRoutes('company')} style={{fontSize:'12px'}} href="/contactus" className="custom-header-dropdown text-dark text-decoration-none cursor-pointer text-uppercase">Contact Us</a>
  </div>
 
       {/* Hamburger on right for mobile */}
@@ -127,9 +129,8 @@ const Navbar = () => {
 
   {activeDropdown === 'About' && (
     <div className="ps-3">
-      <a className="d-block text-dark py-1 cursor-pointer text-uppercase">Borrower</a>
-      <a className="d-block text-dark py-1 cursor-pointer text-uppercase">Add Customer</a>
-      <a className="d-block text-dark py-1 cursor-pointer text-uppercase">Product</a>
+      <a onClick={() => navigateRoutes('aboutus/whoweare')} className="d-block text-dark py-1 cursor-pointer text-uppercase">Who we are?</a>
+      <a className="d-block text-dark py-1 cursor-pointer text-uppercase"onClick={() => navigateRoutes('aboutus/ourclients')}>Our Clients</a>
     </div>
   )}
 </div>
@@ -149,10 +150,11 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'webd' && (
               <div className="ps-3">
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Borrower</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Add Customer</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Product</a>
-              </div>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase"  onClick={() => navigateRoutes('webdevelopment/webiste-development')}>Website Development</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('webdevelopment/e-commerce-development')}>E - Commerce Development</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('webdevelopment/cms-development')}>CMS Development</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('webdevelopment/php-development')}>PHP Development</a>
+</div>
             )}
           </div>
           <div>
@@ -170,9 +172,12 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'digital' && (
               <div className="ps-3">
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Borrower</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Add Customer</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Product</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('digitalmarketing/search-engine-optimization')}>Search engine optimization</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/social-media-optimization')}>Social Media optimization</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('digitalmarketing/social-media-marketing')}>Social Media marketing</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('digitalmarketing/branding')}>Branding</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase"  onClick={() => navigateRoutes('digitalmarketing/logo-designing')}>Logo designing</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('digitalmarketing/video-and-text-marketing')}>Video & Text marketing</a>
               </div>
             )}
           </div>
@@ -191,14 +196,15 @@ const Navbar = () => {
             </a>
             {activeDropdown === 'apps' && (
               <div className="ps-3">
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Borrower</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Add Customer</a>
-                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" >Product</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('apps-and-software/andriod-apps')}>Andriod apps</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('apps-and-software/ios-apps')}>IOS Apps</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('apps-and-software/hybrid-apps')}>Hybrid Apps</a>
+                <a className="d-block text-dark py-1 cursor-pointer text-uppercase" onClick={() => navigateRoutes('apps-and-software/customize-software')}>Customize software</a>
               </div>
             )}
           </div>
           
-           <a onClick={() => navigateRoutes('contact')} className="d-block text-dark py-2 cursor-pointer text-uppercase">Contact Us</a>
+           <a href="/contactus" onClick={() => navigateRoutes('contact')} className="d-block text-dark py-2 cursor-pointer text-uppercase">Contact Us</a>
         </div>
       )}
     </nav>

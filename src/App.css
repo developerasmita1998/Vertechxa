@@ -158,6 +158,7 @@ cursor: pointer;
 }
 .dropdown {
   position: relative;
+margin-bottom:3px;
 }
 
 .dropdown-menu {
@@ -349,9 +350,9 @@ background-color: #f4f5f8;
 }
 .field input.comming_place,
 .field textarea.comming_place {
-  width: 100%;
+  width: 85%;
   padding: 12px 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
@@ -365,7 +366,6 @@ background-color: #f4f5f8;
 }
 
 input#submit {
-  background-color: #007bff;
   color: #fff;
   font-weight: bold;
   padding: 12px 20px;
@@ -1214,7 +1214,7 @@ color:black !important;
   background-color: white;
   top: 100%;
   left: 0;
-  width: 200px;
+  width: fit-content;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -1312,7 +1312,7 @@ div a {
   margin-top: -5px;
 }
 .header-custom-style-inner{
-      margin-left: 8%;
+      margin-left: 11%;
     width: 33% !important;
 
 }
@@ -1328,6 +1328,7 @@ div a {
     border-radius: 0 !important;
     font-size: 13px;
     width: auto;
+    margin-right:13% !important;
 }
 .top-email{
     font-size: 13px !important;
@@ -1402,4 +1403,36 @@ width: 2rem;
   .logo-container {
     margin-left: 11%;
   }
+}
+.quote-img img{
+    width: 85%;
+}
+.fbg {
+    background: #fff;
+    padding: 100px 50px;
+       height: 40rem;
+    width: 39%;
+}
+input:focus , textarea:focus{
+  border-color: #da251d !important;
+}
+.comming_place::placeholder {
+  color:black;
+}
+.field textarea.comming_place{
+width: 85%;
+  margin-bottom: 25px;
+  border: 1px dashed #007bff;}
+#submit:hover {
+  background-color: #0056b3;
+}
+
+#submit:active {
+  background-color: #da251d;
+  color:black;
+}
+
+.custom-header-dropdown:hover, .dropdown a:hover{
+  color:red !important;
+cursor: pointer;
 }

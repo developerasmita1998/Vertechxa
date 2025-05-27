@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect ,useState} from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import phone from "../../assets/phone.png";
@@ -10,6 +10,13 @@ function Contactus() {
       duration: 1000
     });
   }, []);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setmessage] = useState("");
+  const [error, setError] = useState('')
+
   return (
     <div>
       <div className="about-section1">
@@ -42,36 +49,72 @@ function Contactus() {
             </div>
             <div className="row">
               <div className="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                <form action="https://www.vertechxa.com/ThankYou.php" method="post">
+                <form onSubmit={(e) => {
+  e.preventDefault();
+  
+  const formData = {
+    name,
+    email,
+    mobile,
+    subject,
+    message
+  };
+
+  // Get existing submissions
+  const existing = JSON.parse(localStorage.getItem("formSubmissions")) || [];
+
+  // Append new one
+  existing.push(formData);
+
+  // Save back to localStorage
+  localStorage.setItem("formSubmissions", JSON.stringify(existing));
+
+  alert("Form submitted and saved locally!");
+
+  // Reset form
+  setName("");
+  setEmail("");
+  setMobile("");
+  setSubject("");
+  setmessage("");
+}}>
                   <div className="row">
                     <div className="col-md-6 col-sm-6">
                       <div className="field">
-                        <input className="comming_place" id="y_name" autocomplete="off" name="name" type="text" placeholder="Your Name:" required="" />
+                        <input className="comming_place" id="y_name" autocomplete="off" name="name" type="text" placeholder="Your Name:" value={name}  onChange={(e)=>setName(e.target.value)} required="" />
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-6">
                       <div className="field">
-                        <input className="comming_place" id="e_mail" autocomplete="off" name="email" type="email" placeholder="Email Address:" required="" />
+                        <input className="comming_place" id="e_mail" autocomplete="off" name="email" type="email" placeholder="Email Address:"    value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
+                required="" />
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-6">
                       <div className="field">
-                        <input className="comming_place" id="phone_no" autocomplete="off" name="mobile" type="text" placeholder="Phone Number:" required="" />
+                        <input className="comming_place" id="phone_no" autocomplete="off" name="mobile" type="text" placeholder="Phone Number:"     value={mobile}
+                  onChange={(e)=>setMobile(e.target.value)}
+               required="" />
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-6">
                       <div className="field">
-                        <input className="comming_place" id="subject" autocomplete="off" name="sub" type="text" placeholder="Subject:" />
+                        <input className="comming_place" id="subject" autocomplete="off" name="sub" type="text"    value={subject}
+                  onChange={(e)=>setSubject(e.target.value)}
+               placeholder="Subject:" />
                       </div>
                     </div>
                     <div className="col-md-12 col-sm-12">
                       <div className="field">
-                        <textarea className="comming_place" id="message" autocomplete="off" name="msg" placeholder="Message:"></textarea>
+                        <textarea className="comming_place" id="message"     value={message}
+                  onChange={(e)=>setmessage(e.target.value)}
+               autocomplete="off" name="msg" placeholder="Message:"></textarea>
                       </div>
                     </div>
                     <div className="col-md-12 col-sm-12">
                       <div className="field">
-                        <input style={{ border: "none", backgroundColor: "#da251d", color: "white", padding: 0 }} className="coming_place" type="submit" name="submit" id="submit" value="Submit" />
+                        <input style={{ border: "none", backgroundColor: "#da251d", color: "white", padding: 0 }} className="coming_place"  type="submit" name="submit" id="submit" value="Submit" />
                       </div>
                     </div>
                   </div>
